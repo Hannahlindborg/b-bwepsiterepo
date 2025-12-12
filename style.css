@@ -415,7 +415,7 @@ body {
 /*Review section slideshow
 https://www.w3schools.com/howto/howto_js_slideshow.asp*/
 
-.reviews {
+.testimonials {
   position: relative;
   padding: 20px 20px;
   background-color: #f2e2d8;
@@ -427,7 +427,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   margin-bottom: 16vh;
 }
 
-.reviews::before {
+.testimonials::before {
   content: "";
   display: block;
   position: absolute;
@@ -438,7 +438,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   z-index: -1;
 }
 
-.reviews h3 {
+.testimonials h3 {
   display: block;
   color: #4f728a;
   font-size: 4vw;
@@ -446,32 +446,29 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   margin-left: 25px;
 }
 
-.review-user {
+.testimonial-user {
   display: flex;
   flex-direction: row;
   column-gap: 1vw;
 }
 
-.review-slideshow {
+.testimonial-slideshow {
   max-width: 100%;
   position: relative;
   margin: auto;
 }
 
-.review-slide {
+.testimonial-slide {
   display: none;
 }
 
-.review-container {
+.testimonial-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   column-gap: 2vw;
   padding-left: 2vw;
   padding-right: 2vw;
-}
-
-.review-card {
 }
 
 .dot {
@@ -497,41 +494,94 @@ footer {
   background-image: url(b&b-images/footer-image.jpg);
   background-size: cover;
   background-position: center;
-  padding: 20px;
   height: 40vh;
+  position: relative;
+  z-index: 10;
+}
+
+#footer-overlay {
+  background-color: rgb(3, 1, 1);
+  position: absolute;
+  opacity: 50%;
+  top: auto;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-content {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  height: 100%;
   color: white;
-  align-content: center;
+  align-items: start;
   justify-content: center;
   margin-top: 20px;
+  z-index: 1;
 }
 
 footer h3 {
   font-weight: bolder;
-  font-size: 36pt;
+  font-size: 5vh;
+  align-self: center;
 }
 
 #footer-logo {
   grid-column: 1 / span 3;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
+  align-self: center;
   justify-self: center;
 }
 
-.location-row {
-  grid-column: 5 / span 2;
+.contact-row {
+  grid-column: 6 / span 2;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
 }
 
-.contact-row {
+.contact-row ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.contact-row li:hover {
+  text-decoration-line: underline;
+}
+
+.socials-row {
   grid-column: 9 / span 2;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-icon-container {
+  width: 20%;
+  height: 20%;
+  aspect-ratio: 1/1;
+}
+
+.social-icon-container svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*Form*/

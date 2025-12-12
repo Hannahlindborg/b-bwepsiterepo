@@ -3,8 +3,6 @@ const nav = document.querySelector(".top-menu");
 const threshold = 700;
 
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-
   if (window.scrollY > threshold) {
     nav.classList.add("top-menu-with-background");
   } else {
@@ -27,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "none",
     },
     scrollTrigger: {
-      trigger: ".cabin",
-      start: "top top",
+      trigger: ".column",
+      start: "top 80%",
       end: "+1000",
       scrub: 2,
       invalidateOnRefresh: true,
@@ -42,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "start"
   );
 
-  scrollTrigger.create({
-    trigger: ".cabin",
-    start: "top top",
+  ScrollTrigger.create({
+    trigger: ".column",
+    start: "top 80%",
     end: "",
     invalidateOnRefresh: true,
   });
@@ -76,20 +74,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const reviewsContainer = document.querySelector(".reviews");
+  const cabinContainer = document.querySelector(".cabin-page");
 
-  gsap.set(reviewsContainer, {
+  gsap.set(cabinContainer, {
     opacity: 0,
     y: 50,
   });
 
-  gsap.to(reviewsContainer, {
+  gsap.to(cabinContainer, {
     opacity: 1,
     y: 0,
     duration: 2,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: reviewsContainer,
+      trigger: cabinContainer,
       start: "top 80%",
       once: true,
     },
@@ -108,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     scrollTrigger: {
       trigger: ".breakfast-section",
-      start: "top top",
+      start: "top 90%",
       end: "+1000",
       scrub: 2,
       invalidateOnRefresh: true,
@@ -122,44 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "start"
   );
 
-  scrollTrigger.create({
+  ScrollTrigger.create({
     trigger: ".cabin",
     start: "top top",
     end: "",
     invalidateOnRefresh: true,
   });
 });
-
-//Review slideshow
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("review-slide");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
