@@ -1,3 +1,5 @@
+// Menu background on scroll
+
 const nav = document.querySelector(".top-menu");
 
 const threshold = 700;
@@ -10,6 +12,23 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//Split text logo
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(SplitText);
+
+  setTimeout(() => {
+    let split = SplitText.create("#hero-title", { type: "chars" });
+
+    gsap.from(split.chars, {
+      duration: 1,
+      y: 100,
+      autoAlpha: 0,
+      stagger: 0.1,
+    });
+  }, 500);
+});
+
 // Split scroll effect
 //https://www.youtube.com/watch?v=3ePl0OnmG3Y
 
@@ -17,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   const verticalScroll = document.querySelector(".vertical-scroll");
-  //const leftColumn = document.querySelector(".left-column");
   const textColumn = document.querySelector(".text-column");
 
   const tl = gsap.timeline({
@@ -106,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     scrollTrigger: {
       trigger: ".breakfast-section",
-      start: "top 90%",
+      start: "top 80%",
       end: "+1000",
       scrub: 2,
       invalidateOnRefresh: true,
@@ -121,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   ScrollTrigger.create({
-    trigger: ".cabin",
+    trigger: ".breakfast-section",
     start: "top top",
     end: "",
     invalidateOnRefresh: true,

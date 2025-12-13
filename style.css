@@ -123,12 +123,23 @@ h4 {
   flex-direction: column;
   pointer-events: none;
   align-items: center;
-  opacity: 70%;
+  opacity: 60%;
+  animation: 4s fadeIn ease-in;
 }
 
 #hero-logo-image {
   width: 400px;
   height: auto;
+}
+
+/*Hero fade-in animation*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 .hero-logo-title {
@@ -178,27 +189,28 @@ h4 {
   will-change: transform;
   display: flex;
   flex-direction: column;
-  max-width: 70vw;
+  max-width: 90vw;
   align-self: flex-start;
 }
 
 .text-column span {
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-size: 3vh;
   font-weight: 300;
+  margin-bottom: 1vh;
 }
 
 .introduction-section span {
   color: #f2e2d8;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 2px #00000050;
 }
 
 #introduction-cursive {
   font-family: "Alex Brush", cursive;
   font-weight: 100;
   font-style: normal;
-  font-size: 10vh;
+  font-size: 8vh;
   margin-bottom: 5vh;
 }
 
@@ -367,7 +379,7 @@ h4 {
 .breakfast-info span {
   font-size: 3vh;
   font-weight: 300;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #00000050;
 }
 
 #breakfast-cursive {
@@ -518,16 +530,29 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp*/
   padding-right: 2vw;
 }
 
-.dot {
+.page-dots {
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 2vw;
+}
+
+.testimonial-dot {
   cursor: pointer;
-  width: 1vh;
-  height: 1vh;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin: 0 2px;
-  background-color: #4f728a;
   transition: background-color 0.6s ease;
   display: inline-block;
   align-self: center;
+  background-color: #4f728a;
+}
+
+.testimonial-dot.active {
+  color: #2f4250;
 }
 
 /*Footer*/
@@ -581,6 +606,7 @@ footer h4 {
   object-fit: cover;
   align-self: center;
   justify-self: center;
+  opacity: 60%;
 }
 
 .contact-row {
