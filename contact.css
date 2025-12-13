@@ -1,0 +1,110 @@
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.information-container h2 {
+  font-size: 5vh;
+}
+
+.left-column {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  row-gap: 4vh;
+  color: #67372b;
+}
+
+.siljan-images {
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+  width: 100%;
+  column-gap: 2vw;
+}
+
+.siljan-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-form {
+  border: 8px solid #67372b;
+  border-radius: 16px;
+  background-color: #f2e2d8;
+  padding: 2vw;
+  width: 60%;
+  height: auto;
+  justify-self: center;
+}
+
+.message-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-field form input {
+  border-color: #67372b;
+  background-color: none;
+}
+
+.message-form label,
+.message-form h2 {
+  color: #67372b;
+}
+
+.message-form h2 {
+  font-size: 5vh;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#submit-button {
+  background-color: #67372b;
+  color: #f2e2d8;
+}
+
+.directions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+  width: 80%;
+  height: 40vh;
+  justify-self: center;
+  padding-bottom: 10vh;
+}
+
+.directions-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.directions-link svg {
+  color: #67372b;
+  padding-right: 8px;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

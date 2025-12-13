@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="global.js" defer></script>
     <script src="homepage.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
@@ -39,14 +45,7 @@
             alt=""
             id="hero-logo-image"
           />
-          <!-- <div class="hero-logo-title">
-            <img
-              src="b&b-images/graphics/sjöstugan-title.png"
-              alt=""
-              id="hero-sjöstugan"
-            />
-            <img src="b&b-images/graphics/B&B-title.png" alt="" id="hero-b&b" />
-          </div>-->
+          <h1 id="hero-title">Sjöstugan B&B</h1>
         </div>
       </div>
     </header>
@@ -55,14 +54,19 @@
       <div class="vertical-scroll">
         <div class="column" class="introduction-text">
           <div class="text-column">
-            <h2>
-              Family run bed and breakfast<br />
+            <span id="introduction-cursive">
+              Family run Bed and Breakfast<br />
               In the heart of Dalecarlia
-            </h2>
+            </span>
+            <br />
             <span>
               Wake up to a traditional Swedish breakfast overlooking the idyllic
-              Lake Siljan. Your unforgettable escape starts here. Explore our
-              fully equipped cabins and book your restful retreat.
+              Lake Siljan.</span
+            >
+            <br />
+            <span
+              >Your unforgettable escape starts here. Explore our fully equipped
+              cabins and book your restful retreat.
             </span>
           </div>
         </div>
@@ -80,7 +84,7 @@
         your getaway.
       </p>
       <a class="nav-link" href="cabins.html"
-        >Check out all of our available accommodations →
+        >Check Out All Of Our Available Accommodations →
       </a>
       <a href="cabins.html" id="cabin-images-1">
         <img src="b&b-images/cabin-bedroom.jpg" alt="" />
@@ -92,12 +96,12 @@
     <div class="breakfast-section">
       <div class="overlay"></div>
       <div class="breakfast-info">
-        <p>Our homemade breakfast is included in every stay.</p>
-        <h4>Everyday 7-11 am</h4>
+        <span>Our homemade breakfast is included in every stay.</span>
+        <span id="breakfast-cursive">Everyday 7-11 am</span>
       </div>
     </div>
     <div id="explore-container" class="explore">
-      <h2>Explore the area</h2>
+      <h2>Explore The Area</h2>
       <div class="explore-lake">
         <img src="b&b-images/lake-boat.jpg" alt="" />
         <p>Rent a boat for a day on the lake</p>
@@ -305,7 +309,7 @@
       <div class="footer-content">
         <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
         <div class="contact-row">
-          <h3>Contact us</h3>
+          <h4>Contact us</h4>
           <ul>
             <li>sjöstugan@gmail.com</li>
             <li>Address, adress</li>
@@ -313,7 +317,7 @@
           </ul>
         </div>
         <div class="socials-row">
-          <h3>Socials</h3>
+          <h4>Socials</h4>
           <div class="social-icons">
             <div class="social-icon-container">
               <svg

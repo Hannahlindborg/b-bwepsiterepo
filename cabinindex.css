@@ -17,7 +17,6 @@
 .cabin-grid h1 {
   grid-row: 1;
   grid-column: 2 / span 6;
-  font-size: 98pt;
   color: #cc6e58;
   z-index: 2;
   margin-bottom: 2vh;
@@ -42,8 +41,8 @@
 }
 
 .cabin-grid h2 {
-  font-size: 4vw;
   color: #cc6e58;
+  font-size: 16vh;
 }
 
 .cabin-grid,
@@ -54,6 +53,9 @@ h3 {
 
 .cabin-grid h3 {
   margin-top: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 3vh;
+  font-weight: 600;
 }
 
 .cabin-grid a {
@@ -139,6 +141,7 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   z-index: 2;
   margin-left: -50px;
   color: #a7362a;
+  font-size: 10vh;
 }
 
 .cabin-text {

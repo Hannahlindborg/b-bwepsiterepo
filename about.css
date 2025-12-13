@@ -46,7 +46,14 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: left;
+  color: #67372b;
+  row-gap: 2vh;
+  padding: 4vw;
+}
+
+.nav-link {
+  margin-top: 1vh;
 }
