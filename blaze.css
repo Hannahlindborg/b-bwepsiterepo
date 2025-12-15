@@ -1,0 +1,47 @@
+.blaze-slider {
+  /* default config */
+  --slide-gap: 20px;
+  --slides-to-show: 2;
+  /* force ltr - slider does not work in rtl mode */
+  direction: ltr;
+  height: 400px;
+}
+
+.blaze-container {
+  position: relative;
+  height: 100%;
+}
+
+.blaze-track-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.blaze-track {
+  will-change: transform;
+  touch-action: pan-y;
+  display: flex;
+  gap: var(--slide-gap);
+  --slide-width: calc(
+    (100% - (var(--slides-to-show) - 1) * var(--slide-gap)) /
+      var(--slides-to-show)
+  );
+}
+
+.blaze-track,
+.blaze-track > * {
+  display: block !important;
+
+  /* Re-apply the width variable and force flex-shrink to zero */
+  width: var(--slide-width) !important;
+  flex-shrink: 0 !important;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.blaze-track > * {
+  width: var(--slide-width);
+  flex-shrink: 0;
+  height: 100%;
+  display: inline-block;
+}

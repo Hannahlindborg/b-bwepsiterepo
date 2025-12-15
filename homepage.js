@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: ".column",
       start: "top 80%",
-      end: "+1000",
+      end: "+1500",
       scrub: 2,
       invalidateOnRefresh: true,
     },
@@ -67,39 +67,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const exploreContainer = document.querySelector("#explore-container");
-
-  gsap.set(exploreContainer, {
-    opacity: 0,
-    y: 50,
-  });
-
-  gsap.to(exploreContainer, {
-    opacity: 1,
-    y: 0,
-    duration: 2,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: exploreContainer,
-      start: "top 80%",
-      once: true,
-    },
-  });
-});
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
   const cabinContainer = document.querySelector(".cabin-page");
+  const split = SplitText.create("#cabin-title", {
+    type: "chars",
+    charsClass: "char",
+  });
 
   gsap.set(cabinContainer, {
     opacity: 0,
     y: 50,
   });
 
-  gsap.to(cabinContainer, {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: cabinContainer,
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  tl.to(cabinContainer, {
     opacity: 1,
     y: 0,
     duration: 2,
@@ -109,7 +98,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top 80%",
       once: true,
     },
-  });
+  }).from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+    },
+    "+=0.3"
+  );
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -143,5 +142,89 @@ document.addEventListener("DOMContentLoaded", () => {
     start: "top top",
     end: "",
     invalidateOnRefresh: true,
+  });
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  const exploreContainer = document.querySelector("#explore-container");
+  const split = SplitText.create("#explore-title", { type: "chars" });
+
+  gsap.set(exploreContainer, {
+    opacity: 0,
+    y: 50,
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: exploreContainer,
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  tl.to(exploreContainer, {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: exploreContainer,
+      start: "top 80%",
+      once: true,
+    },
+  }).from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+    },
+    "+=0.3"
+  );
+});
+
+//Testimonials
+const el = document.querySelector(".blaze-slider");
+
+new BlazeSlider(el, {
+  all: {
+    enableAutoplay: true,
+    autoplayInterval: 2000,
+    transitionDuration: 300,
+    slidesToShow: 2,
+    stopAutoplayOnInteraction: false,
+  },
+  "(max-width: 900px)": {
+    slidesToShow: 2,
+  },
+  "(max-width: 500px)": {
+    slidesToShow: 1,
+  },
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const testimonialsContainer = document.querySelector(".testimonials");
+
+  gsap.set(testimonialsContainer, {
+    opacity: 0,
+    y: 50,
+  });
+
+  gsap.to(testimonialsContainer, {
+    opacity: 1,
+    y: 0,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: testimonialsContainer,
+      start: "top 80%",
+      once: true,
+    },
   });
 });

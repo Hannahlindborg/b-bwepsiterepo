@@ -6,3 +6,8 @@
   );
   /*backdrop-filter: blur(10px);*/
 }
+
+.booking-section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}

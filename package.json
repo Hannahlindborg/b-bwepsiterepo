@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "blaze-slider": "^1.9.3",
     "gsap": "^3.14.1"
   }
 }
