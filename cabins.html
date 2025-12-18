@@ -31,25 +31,27 @@
     <header>
       <nav class="top-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cabins.html">Cabins</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/booking.html">Book</a></li>
           <li><a href="/about.html">About Us</a></li>
         </ul>
-        <div class="burger">
+        <button class="burger" aria-label="Toggle-menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </nav>
-      <div class="sidebar">
-        <a href="/index.html">Home</a>
-        <a href="/cabins.html">Cabins</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/booking.html">Booking</a>
-        <a href="/about.html">About us</a>
-      </div>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/booking.html">Book</a></li>
+          <li><a href="/about.html">About Us</a></li>
+        </ul>
+      </nav>
     </header>
     <main id="swup" class="transition-main">
       <div class="cabin-grid">
@@ -58,7 +60,7 @@
           id="cabin-kurbits"
           src="b&b-images/graphics/kurbits-blå-rotated.PNG"
         />
-        <div class="cabin" id="lillstugan">
+        <section class="cabin" id="lillstugan">
           <h2>Lillstugan</h2>
           <div class="cabin-image-container">
             <img class="cabin-image" src="b&b-images/lillstugan.jpg" alt="" />
@@ -137,8 +139,8 @@
               >View full cabin details →
             </a>
           </div>
-        </div>
-        <div class="cabin" id="storstugan">
+        </section>
+        <section class="cabin" id="storstugan">
           <h2>Storstugan</h2>
           <div class="cabin-image-container">
             <img class="cabin-image" src="b&b-images/yard.jpg" alt="" />
@@ -217,8 +219,8 @@
               >View full cabin details →
             </a>
           </div>
-        </div>
-        <div class="cabin" id="name">
+        </section>
+        <section class="cabin" id="björkstugan">
           <h2>Björkstugan</h2>
           <div class="cabin-image-container">
             <img class="cabin-image" src="b&b-images/birchcabin.png" alt="" />
@@ -298,8 +300,8 @@
               >View full cabin details →
             </a>
           </div>
-        </div>
-        <div class="cabin" id="torpet">
+        </section>
+        <section class="cabin" id="torpet">
           <h2>Torpet</h2>
           <div class="cabin-image-container">
             <img class="cabin-image" src="b&b-images/torpet.jpg" alt="" />
@@ -379,18 +381,21 @@
               >View full cabin details →
             </a>
           </div>
-        </div>
-        <div class="cabin" id="ladan">
+        </section>
+        <section class="cabin" id="ladan">
           <h2>Ladan</h2>
+
           <div class="cabin-image-container">
             <img class="cabin-image" src="b&b-images/ladan.jpg" alt="" />
           </div>
+
           <div class="cabin-text">
             <h3>A cozy barn-inspired cabin with a warm, rustic touch.</h3>
             <p>
               Ideal for both couples and families, Ladan offers a relaxed
               atmosphere with beautiful views right outside your door.
             </p>
+
             <div class="cabin-icons">
               <div class="icon-container">
                 <svg
@@ -412,6 +417,7 @@
                 </svg>
                 <p>2 people</p>
               </div>
+
               <div class="icon-container">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -426,6 +432,7 @@
                 </svg>
                 <p>2 beds</p>
               </div>
+
               <div class="icon-container">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -435,11 +442,12 @@
                 >
                   <path
                     fill="currentColor"
-                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16zM176 144c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64m256 160c13.3 0 24 10.7 24 24v8h96c13.3 0 24 10.7 24 24s-10.7 24-24 24H312c-13.3 0-24-10.7-24-24s10.7-24 24-24h96v-8c0-13.3 10.7-24 24-24M320 528V416h224v112c0 26.5-21.5 48-48 48H368c-26.5 0-48-21.5-48-48M80 384h128c26.5 0 48 21.5 48 48s-21.5 48-48 48h-16c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-80c0-8.8 7.2-16 16-16m128 64c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v32zM56 528h176c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24"
+                    d="M272 208c0-53-43-96-96-96s-96 43-96 96s43 96 96 96s96-43 96-96m44.4 32c-14.5 64.1-71.9 112-140.4 112c-79.5 0-144-64.5-144-144S96.5 64 176 64c68.5 0 125.9 47.9 140.4 112h71.8c8.8-9.8 21.6-16 35.8-16h104c26.5 0 48 21.5 48 48s-21.5 48-48 48H424c-14.2 0-27-6.2-35.8-16z"
                   />
                 </svg>
                 <p>Kitchen</p>
               </div>
+
               <div class="icon-container">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -449,16 +457,16 @@
                 >
                   <path
                     fill="currentColor"
-                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498a11 11 0 0 0 3.396 5.327c.549.474 1.145.896 1.782 1.256L6.097 27.57c-.093.186-.227.453-.328.733c-.1.277-.21.678-.158 1.11c.06.5.332.959.832 1.25c.44.254.982.337 1.557.337h14c.825 0 1.567-.402 2.082-.918c.515-.515.918-1.257.918-2.082v-8c0-.268.155-.627.445-1.024A4 4 0 0 0 29 15V3a2 2 0 0 0-2-2zM9.416 25.403A11 11 0 0 0 13 26c4.22 0 8.114-2.081 10-5.582V28c0 .175-.098.433-.332.668S22.175 29 22 29H8q-.218-.001-.349-.02c.058-.159.142-.33.243-.533zM20.5 17c.334.445.814.775 1.368.92C20.811 21.587 17.223 24 13 24c-2.29 0-4.38-.855-5.968-2.263A9 9 0 0 1 4.222 17zm-.45-1H3v-1.5a.5.5 0 0 1 .5-.5H20v1.5q0 .257.05.5M27 15a2 2 0 0 1-2 2h-2.5a1.5 1.5 0 0 1-1.5-1.5V3h6z"
+                    d="M21 1a2 2 0 0 0-2 2v9H3.5A2.5 2.5 0 0 0 1 14.5v2a1.5 1.5 0 0 0 1.414 1.498..."
                   />
                 </svg>
                 <p>Bathroom</p>
               </div>
             </div>
 
-            <a class="nav-link" href="ladan.html">View full cabin details → </a>
+            <a class="nav-link" href="ladan.html">View full cabin details →</a>
           </div>
-        </div>
+        </section>
       </div>
     </main>
     <footer id="footer-container">
@@ -477,7 +485,7 @@
           <div class="socials-row">
             <h4>Socials</h4>
             <div class="social-icons">
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -490,7 +498,7 @@
                   />
                 </svg>
               </div>
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

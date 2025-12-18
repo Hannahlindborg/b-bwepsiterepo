@@ -4,6 +4,7 @@ export function initCabinPage() {
       initSplitText();
       initImageGallery();
       initScrollTo();
+      initSplitTextBooking();
       initAmenitiesTrigger();
       initBookingForm();
       prefillRoom();
@@ -63,6 +64,29 @@ function initImageGallery() {
   });
 }
 
+//Booking title animation
+function initSplitTextBooking() {
+  const split = SplitText.create("#booking-title", {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  if (!split) return;
+
+  gsap.from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+      delay: 0.5,
+    },
+    "+=0.3"
+  );
+}
+
 //Scroll from booking link to booking form
 
 function initScrollTo() {
@@ -83,7 +107,18 @@ function initScrollTo() {
     const elem = hash ? document.querySelector(hash) : false;
     if (elem) {
       if (e) e.preventDefault();
-      gsap.to(window, { scrollTo: elem });
+      gsap.to(window, {
+        scrollTo: elem,
+        duration: 1,
+        ease: "power2.out",
+        onComplete: () => {
+          history.replaceState(
+            null,
+            document.title,
+            window.location.pathname + window.location.search
+          );
+        },
+      });
     }
   }
 

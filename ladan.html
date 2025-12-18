@@ -33,25 +33,27 @@
     <header>
       <nav class="top-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cabins.html">Cabins</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/booking.html">Book</a></li>
           <li><a href="/about.html">About Us</a></li>
         </ul>
-        <div class="burger">
+        <button class="burger" aria-label="Toggle-menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </nav>
-      <div class="sidebar">
-        <a href="/index.html">Home</a>
-        <a href="/cabins.html">Cabins</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/booking.html">Booking</a>
-        <a href="/about.html">About us</a>
-      </div>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/booking.html">Book</a></li>
+          <li><a href="/about.html">About Us</a></li>
+        </ul>
+      </nav>
     </header>
     <main id="swup" class="transition-main">
       <img
@@ -494,6 +496,7 @@
           </div>
         </div>
       </div>
+      <h3 id="booking-title">Book Ladan</h3>
       <section id="booking-section">
         <div class="form-container">
           <!-- Timeline Navigation -->
@@ -649,7 +652,7 @@
           <div class="socials-row">
             <h4>Socials</h4>
             <div class="social-icons">
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -662,7 +665,7 @@
                   />
                 </svg>
               </div>
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Facebook">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

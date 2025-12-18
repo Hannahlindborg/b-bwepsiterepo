@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main page</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="homepage.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,25 +27,27 @@
     <header>
       <nav class="top-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cabins.html">Cabins</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/booking.html">Book</a></li>
           <li><a href="/about.html">About Us</a></li>
         </ul>
-        <div class="burger">
+        <button class="burger" aria-label="Toggle-menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </nav>
-      <div class="sidebar">
-        <a href="/index.html">Home</a>
-        <a href="/cabins.html">Cabins</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/booking.html">Booking</a>
-        <a href="/about.html">About us</a>
-      </div>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cabins.html">Cabins</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/booking.html">Book</a></li>
+          <li><a href="/about.html">About Us</a></li>
+        </ul>
+      </nav>
     </header>
     <main id="swup" class="transition-main">
       <div class="hero-container">
@@ -61,31 +64,31 @@
           <h1 id="hero-title">Sjöstugan B&B</h1>
         </div>
       </div>
-      <div class="introduction-section">
+      <section class="introduction-section">
         <div class="overlay"></div>
         <div class="vertical-scroll">
-          <div class="column" class="introduction-text">
+          <div class="column introduction-text">
             <div class="text-column">
-              <span id="introduction-cursive">
+              <p id="introduction-cursive">
                 Family run Bed & Breakfast in the heart of Dalecarlia
-              </span>
+              </p>
               <br />
-              <span>
+              <p>
                 Wake up to a traditional Swedish breakfast overlooking the
-                idyllic Lake Siljan.</span
-              >
-              <span>Your unforgettable escape starts here.</span>
-              <span>
+                idyllic Lake Siljan.
+              </p>
+              <p>Your unforgettable escape starts here.</p>
+              <p>
                 Explore our fully equipped cabins and book your restful retreat.
-              </span>
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div id="introduction-kurbits">
         <img src="b&b-images/graphics/kurbits-blå.png" alt="" />
       </div>
-      <div class="cabin-page">
+      <section class="cabin-page">
         <h2 id="cabin-title">Our Cabins</h2>
         <div class="cabin-text">
           <p>
@@ -104,15 +107,15 @@
         <a href="cabins.html" id="cabin-images-2">
           <img src="b&b-images/lantern-cabin.jpg" alt=""
         /></a>
-      </div>
-      <div class="breakfast-section">
+      </section>
+      <section class="breakfast-section">
         <div class="overlay"></div>
         <div class="breakfast-info">
           <span>Our homemade breakfast is included in every stay.</span>
           <span id="breakfast-cursive">Everyday 7-11 am</span>
         </div>
-      </div>
-      <div id="explore-container" class="explore">
+      </section>
+      <section id="explore-container" class="explore">
         <h2 id="explore-title">Explore The Area</h2>
         <div class="explore-lake">
           <img src="b&b-images/lake-boat.jpg" alt="" />
@@ -130,8 +133,8 @@
           <img src="b&b-images/rättvik-pir.jpg" alt="" />
           <p>Have a beachday at the pier</p>
         </div>
-      </div>
-      <div class="testimonials">
+      </section>
+      <section class="testimonials">
         <h3>What our guests have said</h3>
         <div class="blaze-slider" id="testimonialSlider">
           <div class="blaze-container">
@@ -327,12 +330,16 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer id="footer-container">
       <div id="footer-overlay"></div>
       <div class="footer-content">
-        <img id="footer-logo" src="b&b-images/graphics/SVG/Asset 1.svg" />
+        <img
+          id="footer-logo"
+          src="b&b-images/graphics/SVG/Asset 1.svg"
+          alt=""
+        />
         <div class="footer-information">
           <div class="contact-row">
             <h4>Contact us</h4>
@@ -345,7 +352,7 @@
           <div class="socials-row">
             <h4>Socials</h4>
             <div class="social-icons">
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Instagram">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="34"
@@ -358,7 +365,7 @@
                   />
                 </svg>
               </div>
-              <div class="social-icon-container">
+              <div class="social-icon-container" aria-label="Facebook">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="34"
