@@ -1,5 +1,33 @@
 export function initBookingPage() {
-  initBookingForm();
+  document.fonts.ready.then(() => {
+    return gsap.context(() => {
+      initSplitText();
+      initBookingForm();
+    });
+  });
+}
+
+//Title animation
+function initSplitText() {
+  const split = SplitText.create("#title", {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  if (!split) return;
+
+  gsap.from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+      delay: 0.5,
+    },
+    "+=0.3"
+  );
 }
 
 // Booking Form

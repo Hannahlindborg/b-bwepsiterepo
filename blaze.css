@@ -26,22 +26,17 @@
     (100% - (var(--slides-to-show) - 1) * var(--slide-gap)) /
       var(--slides-to-show)
   );
-}
-
-.blaze-track,
-.blaze-track > * {
-  display: block !important;
-
-  /* Re-apply the width variable and force flex-shrink to zero */
-  width: var(--slide-width) !important;
-  flex-shrink: 0 !important;
+  flex-shrink: 0;
   height: 100%;
   box-sizing: border-box;
 }
 
 .blaze-track > * {
-  width: var(--slide-width);
   flex-shrink: 0;
   height: 100%;
   display: inline-block;
+  width: var(--slide-width) !important;
+  flex-shrink: 0 !important;
+  height: 100%;
+  box-sizing: border-box;
 }

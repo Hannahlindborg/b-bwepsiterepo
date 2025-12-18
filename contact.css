@@ -1,17 +1,33 @@
 #contact-title {
   margin-bottom: 0;
-  margin-left: 4vw;
+  margin-left: 8vw;
 }
 
 .contact-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 8vh;
 }
 
 .contact-information {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 2vw;
+  justify-content: flex-start;
+}
+
+.information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2vh;
 }
 
 .contact-section h2 {
@@ -19,10 +35,11 @@
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
+  margin-bottom: 1vh;
 }
 
 .left-column {
-  width: 60%;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -100,7 +117,8 @@
   width: 80%;
   height: 40vh;
   justify-self: center;
-  padding-bottom: 10vh;
+  margin-bottom: 24vh;
+  margin-top: 16vh;
 }
 
 .directions-link {
@@ -116,10 +134,65 @@
 .map-container {
   width: 100%;
   height: 100%;
+  margin-top: 1vh;
 }
 
 .map-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.map-container img:hover {
+  cursor: pointer;
+}
+
+#blaze-selector {
+  --slides-to-show: 3;
+}
+
+.image-gallery {
+  margin-top: 16vh;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    row-gap: 8vh;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+  }
+
+  #contact-title {
+    margin-top: 16vh;
+  }
+
+  .directions {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+  }
+  #contact-title {
+    justify-self: center;
+    margin-left: 0;
+  }
+  .information-container {
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .information-container h2 {
+    font-size: 1.25rem;
+  }
+  .social-icons-container svg {
+    width: 24px;
+    height: 24px;
+  }
+  .social-icons-container {
+    padding-top: 1vh;
+  }
+  .image-gallery {
+    margin-top: 8vh;
+  }
 }

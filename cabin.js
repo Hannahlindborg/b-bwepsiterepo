@@ -13,7 +13,6 @@ export function initCabinPage() {
 
 //Title animation
 function initSplitText() {
-  console.log("check cabin", document.querySelector("#title"));
   const split = SplitText.create("#title", {
     type: "chars",
     charsClass: "char",

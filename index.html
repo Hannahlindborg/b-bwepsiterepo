@@ -26,28 +26,25 @@
     <header>
       <nav class="top-menu">
         <ul>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-          >
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 8h22M5 16h22M5 24h22"
-            />
-          </svg>
           <li><a href="index.html">Home</a></li>
           <li><a href="cabins.html">Cabins</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/booking.html">Book</a></li>
           <li><a href="/about.html">About Us</a></li>
         </ul>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+      <div class="sidebar">
+        <a href="/index.html">Home</a>
+        <a href="/cabins.html">Cabins</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/booking.html">Booking</a>
+        <a href="/about.html">About us</a>
+      </div>
     </header>
     <main id="swup" class="transition-main">
       <div class="hero-container">
@@ -98,7 +95,7 @@
             perfect for your getaway.
           </p>
           <a class="nav-link" href="cabins.html"
-            >Check out all of our available accommodations →
+            >Check out our Available Accommodations →
           </a>
         </div>
         <a href="cabins.html" id="cabin-images-1">
@@ -320,8 +317,13 @@
                 </div>
               </div>
             </div>
-            <div class="page-dots-container">
-              <span data-blaze-nav></span>
+            <div class="my-structure">
+              <button
+                class="blaze-prev"
+                aria-label="Go to previous slide"
+              ></button>
+              <div class="blaze-pagination"></div>
+              <button class="blaze-next" aria-label="Go to next slide"></button>
             </div>
           </div>
         </div>
@@ -346,8 +348,8 @@
               <div class="social-icon-container">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="34"
+                  height="34"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -359,8 +361,8 @@
               <div class="social-icon-container">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="34"
+                  height="34"
                   viewBox="0 0 24 24"
                 >
                   <path

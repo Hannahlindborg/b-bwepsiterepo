@@ -3,9 +3,33 @@
 export function initCabinIndexPage() {
   document.fonts.ready.then(() => {
     return gsap.context(() => {
+      initSplitText();
       initCabinCardTrigger();
     });
   });
+}
+
+//Title animation
+function initSplitText() {
+  const split = SplitText.create("#title", {
+    type: "chars",
+    charsClass: "char",
+  });
+
+  if (!split) return;
+
+  gsap.from(
+    split.chars,
+    {
+      x: -120,
+      autoAlpha: 0,
+      duration: 1,
+      stagger: 0.035,
+      ease: "power4.out",
+      delay: 0.5,
+    },
+    "+=0.3"
+  );
 }
 
 function initCabinCardTrigger() {

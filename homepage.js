@@ -1,13 +1,16 @@
 export function initHomePage() {
-  console.log("check");
-  initMenuScroll();
-  initSplitTextLogo();
-  initIntroductionTrigger();
-  initCabinSection();
-  initBreakfastSection();
-  initExploreSection();
-  initTestimonialSlider();
-  initTestimonialTrigger();
+  document.fonts.ready.then(() => {
+    return gsap.context(() => {
+      initMenuScroll();
+      initSplitTextLogo();
+      initIntroductionTrigger();
+      initCabinSection();
+      initBreakfastSection();
+      initExploreSection();
+      initTestimonialSlider();
+      initTestimonialTrigger();
+    });
+  });
 }
 
 // Menu background on scroll
@@ -205,9 +208,12 @@ function initTestimonialSlider() {
 
   new BlazeSlider(el, {
     all: {
-      enableAutoplay: true,
-      autoplayInterval: 2000,
-      transitionDuration: 300,
+      enableAutoplay: false,
+      stopAutoplayOnInteraction: true,
+      autoplayInterval: 10000,
+      transitionDuration: 500,
+      enablePagination: true,
+      transitionTimingFunction: "ease",
       slidesToShow: 2,
       stopAutoplayOnInteraction: false,
     },

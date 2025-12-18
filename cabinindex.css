@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto repeat(5, auto);
-  row-gap: 20px;
+  row-gap: 10vh;
+  margin-bottom: 10vh;
 }
 
 .cabin-grid h1 {
@@ -170,6 +171,8 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   column-gap: 16px;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
 .cabin-icons svg {
@@ -183,6 +186,13 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   flex-direction: column;
   justify-items: center;
   align-items: center;
+}
+
+.icon-container p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 /*Border*/
@@ -210,8 +220,7 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   .cabin-grid {
     display: flex;
     flex-direction: column;
-    margin-right: 5vw;
-    margin-left: 5vw;
+    padding: 10vw;
     row-gap: 10vh;
   }
 
@@ -234,11 +243,16 @@ https://www.google.com/search?q=partial+frame+border+css&oq=partial+frame+border
   }
 
   .cabin-image-container {
-    margin-left: -20;
+    margin-left: -5vw;
     width: 100%;
+  }
+
+  .cabin-grid h3 {
+    margin: 0;
   }
 
   .cabin-text {
     padding: 3vw;
+    row-gap: 2vh;
   }
 }

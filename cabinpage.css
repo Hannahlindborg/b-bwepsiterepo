@@ -22,14 +22,13 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto auto;
-  margin-bottom: 8vh;
+  margin-bottom: 16vh;
 }
 
 .cabin-gallery-section h1 {
-  font-size: 98pt;
   color: #cc6e58;
   grid-row: 1;
-  grid-column: 2 / span 6;
+  grid-column: 2 / span 7;
   margin-bottom: 2vh;
 }
 
@@ -40,17 +39,21 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 12px;
+  margin-bottom: 2vh;
+  height: auto;
 }
 
 .gallery-preview {
   grid-column: 1 / span 7;
   position: relative;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 #main-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -73,18 +76,21 @@
   grid-column: 8 / span 3;
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
   background-color: #fff3eb;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .cabin-gallery-text {
-  grid-column: 2 / span 7;
+  grid-column: 2 / span 10;
   grid-row: 3;
 }
 
 .cabin-gallery-text p {
   color: #67372b;
   background-color: #fff3eb;
+  margin-bottom: 4vh;
+  max-width: 75ch;
 }
 
 .cabin-gallery-text a {
@@ -95,6 +101,12 @@
 .thumbnail {
   opacity: 0.6;
   transition: transform ease-in-out 0.5s;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .thumbnail:hover {
@@ -122,18 +134,13 @@
     grid-column: auto;
   }
   .gallery-preview {
-    width: 100%;
-    height: auto;
     grid-column: auto;
+    width: 100%;
   }
   .thumbnail-grid {
     flex-direction: row;
+    flex-wrap: wrap;
     grid-column: auto;
-  }
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .cabin-gallery-text {
     grid-row: 3;
@@ -149,8 +156,8 @@
 }
 
 .amenities-container {
-  grid-column: 2 / span 10;
-  border: 8px solid rgb(79, 114, 138);
+  grid-column: 3 / span 8;
+  border: 6px solid rgb(79, 114, 138);
   border-radius: 16px;
   position: relative;
   z-index: -2;
@@ -180,12 +187,21 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
-  row-gap: 4vh;
+  row-gap: 8vh;
   justify-content: center;
   align-content: center;
+  padding-top: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
+}
+
+.icon-grid p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #2f4250;
 }
 
 .icon-container {
@@ -199,6 +215,8 @@
 .icon-container svg {
   color: #4f728a;
   object-fit: cover;
+  width: 36px;
+  height: 36px;
 }
 
 .icon-container p {
@@ -211,6 +229,11 @@
   grid-column: 1 / span 12;
 }
 
+#booking-title {
+  color: #cc6e58;
+  margin-left: 8vw;
+}
+
 @media screen and (max-width: 1050px) {
   .icon-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -218,6 +241,9 @@
   .icon-container svg {
     width: 34px;
     height: 34px;
+  }
+  .icon-grid p {
+    font-size: 0.85;
   }
 }
 
@@ -235,5 +261,11 @@
   .amenities h3 {
     margin-top: -25px;
     margin-bottom: 10px;
+  }
+  #cabin-kurbits {
+    display: none;
+  }
+  .icon-grid p {
+    font-size: 0.75;
   }
 }
